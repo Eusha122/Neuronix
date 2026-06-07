@@ -1,0 +1,27 @@
+# Build output
+build/
+out/
+
+# IDE and editor
+.vs/
+*.user
+*.suo
+.vscode/settings.json
+
+# Claude Code
+.claude/
+
+# Compiled artifacts
+*.obj
+*.o
+*.lib
+*.a
+*.dll
+*.so
+*.exe
+*.pdb
+*.ilk
+*.exp
+
+# CMake generated
+CMakeSettings.json
