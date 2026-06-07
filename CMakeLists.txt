@@ -33,6 +33,9 @@ add_library(neuronix
     src/models/model.cpp
     src/losses/mse_loss.cpp
     src/losses/cross_entropy_loss.cpp
+    src/data/mnist_loader.cpp
+    src/data/data_loader.cpp
+    src/metrics/accuracy.cpp
 )
 
 add_library(Neuronix::neuronix ALIAS neuronix)
@@ -75,6 +78,7 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/backprop_tests.cpp
         tests/loss_tests.cpp
         tests/training_tests.cpp
+        tests/data_tests.cpp
     )
 
     target_link_libraries(neuronix_tests
@@ -97,11 +101,12 @@ if(NEURONIX_BUILD_EXAMPLES)
     add_executable(neuronix_hello
         examples/hello_neuronix.cpp
     )
+    target_link_libraries(neuronix_hello PRIVATE Neuronix::neuronix)
 
-    target_link_libraries(neuronix_hello
-        PRIVATE
-            Neuronix::neuronix
+    add_executable(neuronix_mnist
+        examples/mnist_train.cpp
     )
+    target_link_libraries(neuronix_mnist PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)

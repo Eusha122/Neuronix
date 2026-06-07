@@ -16,6 +16,9 @@
 #include "neuronix/losses/cross_entropy_loss.hpp"
 #include "neuronix/models/model.hpp"
 #include "neuronix/optimizers/sgd.hpp"
+#include "neuronix/data/mnist_loader.hpp"
+#include "neuronix/data/data_loader.hpp"
+#include "neuronix/metrics/accuracy.hpp"
 
 namespace neuronix {
 
