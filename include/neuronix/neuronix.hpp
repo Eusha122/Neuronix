@@ -4,6 +4,7 @@
 
 #include "neuronix/version.hpp"
 #include "neuronix/core/matrix.hpp"
+#include "neuronix/core/tensor.hpp"
 
 namespace neuronix {
 

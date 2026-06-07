@@ -1,21 +1,12 @@
 #include "neuronix/core/matrix.hpp"
+#include "rng_impl.hpp"
 
 #include <algorithm>
 #include <cmath>
 #include <numeric>
-#include <random>
 #include <stdexcept>
 
 namespace neuronix {
-
-namespace {
-
-std::mt19937_64& global_rng() {
-    static std::mt19937_64 rng{std::random_device{}()};
-    return rng;
-}
-
-} // namespace
 
 // Constructors
 
@@ -66,7 +57,7 @@ Matrix Matrix::random_uniform(std::size_t rows, std::size_t cols, double low, do
     Matrix m{rows, cols};
     std::uniform_real_distribution<double> dist{low, high};
     for (auto& v : m.data_) {
-        v = dist(global_rng());
+        v = dist(detail::global_rng());
     }
     return m;
 }
@@ -78,7 +69,7 @@ Matrix Matrix::random_normal(std::size_t rows, std::size_t cols, double mean, do
     Matrix m{rows, cols};
     std::normal_distribution<double> dist{mean, stddev};
     for (auto& v : m.data_) {
-        v = dist(global_rng());
+        v = dist(detail::global_rng());
     }
     return m;
 }
@@ -304,7 +295,7 @@ Matrix operator*(double scalar, const Matrix& m) {
 }
 
 void seed_random(std::uint64_t seed) {
-    global_rng().seed(seed);
+    detail::global_rng().seed(seed);
 }
 
 } // namespace neuronix
