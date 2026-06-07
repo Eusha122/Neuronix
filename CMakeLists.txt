@@ -29,6 +29,8 @@ add_library(neuronix
     src/core/matrix.cpp
     src/core/tensor.cpp
     src/layers/dense.cpp
+    src/layers/conv2d.cpp
+    src/layers/batch_norm.cpp
     src/activations/softmax.cpp
     src/models/model.cpp
     src/losses/mse_loss.cpp
@@ -81,6 +83,10 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/data_tests.cpp
         tests/model_io_tests.cpp
         tests/optimizer_tests.cpp
+        tests/dropout_tests.cpp
+        tests/scheduler_tests.cpp
+        tests/conv_tests.cpp
+        tests/batchnorm_tests.cpp
     )
 
     target_link_libraries(neuronix_tests
@@ -109,6 +115,11 @@ if(NEURONIX_BUILD_EXAMPLES)
         examples/mnist_train.cpp
     )
     target_link_libraries(neuronix_mnist PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_lenet
+        examples/lenet_mnist.cpp
+    )
+    target_link_libraries(neuronix_lenet PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)
