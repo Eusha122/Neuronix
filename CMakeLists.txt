@@ -31,6 +31,8 @@ add_library(neuronix
     src/layers/dense.cpp
     src/activations/softmax.cpp
     src/models/model.cpp
+    src/losses/mse_loss.cpp
+    src/losses/cross_entropy_loss.cpp
 )
 
 add_library(Neuronix::neuronix ALIAS neuronix)
@@ -70,6 +72,9 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/dense_tests.cpp
         tests/activation_tests.cpp
         tests/model_tests.cpp
+        tests/backprop_tests.cpp
+        tests/loss_tests.cpp
+        tests/training_tests.cpp
     )
 
     target_link_libraries(neuronix_tests

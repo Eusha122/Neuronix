@@ -11,7 +11,11 @@
 #include "neuronix/activations/sigmoid.hpp"
 #include "neuronix/activations/tanh_activation.hpp"
 #include "neuronix/activations/softmax.hpp"
+#include "neuronix/losses/loss.hpp"
+#include "neuronix/losses/mse_loss.hpp"
+#include "neuronix/losses/cross_entropy_loss.hpp"
 #include "neuronix/models/model.hpp"
+#include "neuronix/optimizers/sgd.hpp"
 
 namespace neuronix {
 

@@ -10,6 +10,7 @@ namespace neuronix {
 
 class Matrix {
 public:
+    Matrix() noexcept : rows_{0}, cols_{0} {}
     Matrix(std::size_t rows, std::size_t cols);
     Matrix(std::size_t rows, std::size_t cols, double value);
     Matrix(std::size_t rows, std::size_t cols, std::initializer_list<double> values);
