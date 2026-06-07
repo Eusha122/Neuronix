@@ -1,5 +1,6 @@
 #include "neuronix/layers/dense.hpp"
 
+#include <cmath>
 #include <stdexcept>
 
 namespace neuronix {
@@ -49,6 +50,36 @@ Matrix Dense::backward(const Matrix& grad_output) {
 void Dense::update(double lr) {
     weights_ -= lr * grad_weights_;
     bias_    -= lr * grad_bias_;
+}
+
+void Dense::adam_step(double lr, double beta1, double beta2,
+                      double eps, std::size_t t) {
+    // Lazy-init moment matrices on first call
+    if (m_w_.rows() == 0) {
+        m_w_ = Matrix::zeros(out_, in_);
+        v_w_ = Matrix::zeros(out_, in_);
+        m_b_ = Matrix::zeros(out_, 1);
+        v_b_ = Matrix::zeros(out_, 1);
+    }
+
+    const double dt = static_cast<double>(t);
+    const double bc1 = 1.0 - std::pow(beta1, dt);  // bias-correction denominator
+    const double bc2 = 1.0 - std::pow(beta2, dt);
+
+    for (std::size_t r = 0; r < out_; ++r) {
+        for (std::size_t c = 0; c < in_; ++c) {
+            const double g = grad_weights_(r, c);
+            m_w_(r, c) = beta1 * m_w_(r, c) + (1.0 - beta1) * g;
+            v_w_(r, c) = beta2 * v_w_(r, c) + (1.0 - beta2) * g * g;
+            weights_(r, c) -= lr * (m_w_(r, c) / bc1) /
+                              (std::sqrt(v_w_(r, c) / bc2) + eps);
+        }
+        const double gb = grad_bias_(r, 0);
+        m_b_(r, 0) = beta1 * m_b_(r, 0) + (1.0 - beta1) * gb;
+        v_b_(r, 0) = beta2 * v_b_(r, 0) + (1.0 - beta2) * gb * gb;
+        bias_(r, 0) -= lr * (m_b_(r, 0) / bc1) /
+                       (std::sqrt(v_b_(r, 0) / bc2) + eps);
+    }
 }
 
 void Dense::zero_grad() {

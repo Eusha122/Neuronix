@@ -79,6 +79,8 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/loss_tests.cpp
         tests/training_tests.cpp
         tests/data_tests.cpp
+        tests/model_io_tests.cpp
+        tests/optimizer_tests.cpp
     )
 
     target_link_libraries(neuronix_tests

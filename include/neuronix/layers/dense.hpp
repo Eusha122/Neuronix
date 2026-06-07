@@ -22,6 +22,10 @@ public:
     // SGD update
     void update(double lr) override;
 
+    // Adam update (maintains internal first/second moment state)
+    void adam_step(double lr, double beta1, double beta2,
+                   double eps, std::size_t t) override;
+
     // Zero accumulated gradients
     void zero_grad() override;
 
@@ -47,6 +51,9 @@ private:
     Matrix grad_weights_;  // (out, in) accumulated gradient
     Matrix grad_bias_;     // (out, 1) accumulated gradient
     Matrix input_cache_;   // (in, batch) cached from forward_train
+    // Adam moment matrices — zero-sized until first adam_step call
+    Matrix m_w_, v_w_;     // first/second moment for weights (out, in)
+    Matrix m_b_, v_b_;     // first/second moment for bias   (out, 1)
 };
 
 } // namespace neuronix

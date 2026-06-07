@@ -2,6 +2,7 @@
 
 #include <cstddef>
 #include <memory>
+#include <string>
 #include <utility>
 #include <vector>
 
@@ -33,6 +34,10 @@ public:
     // Apply one gradient-descent step to all trainable layers.
     void update(double lr);
 
+    // Apply one Adam step to all trainable layers.
+    void adam_step(double lr, double beta1, double beta2,
+                   double eps, std::size_t t);
+
     // Zero all accumulated gradients.
     void zero_grad();
 
@@ -44,6 +49,10 @@ public:
     void fit(const Matrix& X, const Matrix& y, Loss& loss_fn,
              std::size_t epochs, double lr,
              bool verbose = false, std::size_t print_every = 100);
+
+    // ── Serialization ─────────────────────────────────────────────────────────
+    void save(const std::string& path) const;
+    [[nodiscard]] static Model load(const std::string& path);
 
     // ── Metadata ──────────────────────────────────────────────────────────────
     [[nodiscard]] std::size_t depth() const noexcept { return layers_.size(); }

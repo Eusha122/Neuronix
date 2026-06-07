@@ -32,6 +32,11 @@ public:
     // Apply gradient update with given learning rate. Default: no-op.
     virtual void update(double /*lr*/) {}
 
+    // Adam update. t is the 1-based step count used for bias correction.
+    // Default: no-op (stateless layers have no parameters).
+    virtual void adam_step(double /*lr*/, double /*beta1*/, double /*beta2*/,
+                           double /*eps*/, std::size_t /*t*/) {}
+
     // Zero accumulated gradients. Default: no-op.
     virtual void zero_grad() {}
 
