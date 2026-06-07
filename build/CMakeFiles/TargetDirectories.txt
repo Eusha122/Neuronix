@@ -1,0 +1,15 @@
+D:/Neural network/build/CMakeFiles/neuronix.dir
+D:/Neural network/build/CMakeFiles/Experimental.dir
+D:/Neural network/build/CMakeFiles/Nightly.dir
+D:/Neural network/build/CMakeFiles/Continuous.dir
+D:/Neural network/build/CMakeFiles/NightlyMemoryCheck.dir
+D:/Neural network/build/CMakeFiles/neuronix_tests.dir
+D:/Neural network/build/CMakeFiles/neuronix_hello.dir
+D:/Neural network/build/CMakeFiles/RUN_TESTS.dir
+D:/Neural network/build/CMakeFiles/ALL_BUILD.dir
+D:/Neural network/build/CMakeFiles/ZERO_CHECK.dir
+D:/Neural network/build/_deps/catch2-build/CMakeFiles/RUN_TESTS.dir
+D:/Neural network/build/_deps/catch2-build/CMakeFiles/ALL_BUILD.dir
+D:/Neural network/build/_deps/catch2-build/src/CMakeFiles/Catch2.dir
+D:/Neural network/build/_deps/catch2-build/src/CMakeFiles/Catch2WithMain.dir
+D:/Neural network/build/_deps/catch2-build/src/CMakeFiles/RUN_TESTS.dir

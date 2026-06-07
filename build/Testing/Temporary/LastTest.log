@@ -1,0 +1,1363 @@
+Start testing: Jun 08 01:08 Bangladesh Standard Time
+----------------------------------------------------------
+1/68 Testing: Neuronix exposes framework identity
+1/68 Test: Neuronix exposes framework identity
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Neuronix exposes framework identity"
+Directory: D:/Neural network/build
+"Neuronix exposes framework identity" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Neuronix exposes framework identity"
+Randomness seeded to: 3733375109
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Neuronix exposes framework identity" end time: Jun 08 01:08 Bangladesh Standard Time
+"Neuronix exposes framework identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/68 Testing: Matrix zero-initialized construction
+2/68 Test: Matrix zero-initialized construction
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix zero-initialized construction"
+Directory: D:/Neural network/build
+"Matrix zero-initialized construction" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix zero-initialized construction"
+Randomness seeded to: 1598299949
+===============================================================================
+All tests passed (10 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix zero-initialized construction" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix zero-initialized construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/68 Testing: Matrix fill-value construction
+3/68 Test: Matrix fill-value construction
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix fill-value construction"
+Directory: D:/Neural network/build
+"Matrix fill-value construction" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix fill-value construction"
+Randomness seeded to: 1245506009
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix fill-value construction" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix fill-value construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/68 Testing: Matrix initializer_list construction
+4/68 Test: Matrix initializer_list construction
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix initializer_list construction"
+Directory: D:/Neural network/build
+"Matrix initializer_list construction" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix initializer_list construction"
+Randomness seeded to: 3904156653
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix initializer_list construction" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix initializer_list construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/68 Testing: Matrix vector construction
+5/68 Test: Matrix vector construction
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix vector construction"
+Directory: D:/Neural network/build
+"Matrix vector construction" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix vector construction"
+Randomness seeded to: 3290077343
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix vector construction" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix vector construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/68 Testing: Matrix empty construction
+6/68 Test: Matrix empty construction
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix empty construction"
+Directory: D:/Neural network/build
+"Matrix empty construction" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix empty construction"
+Randomness seeded to: 2928905863
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix empty construction" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix empty construction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/68 Testing: Matrix initializer_list size mismatch throws
+7/68 Test: Matrix initializer_list size mismatch throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix initializer_list size mismatch throws"
+Directory: D:/Neural network/build
+"Matrix initializer_list size mismatch throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix initializer_list size mismatch throws"
+Randomness seeded to: 78354727
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix initializer_list size mismatch throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix initializer_list size mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/68 Testing: Matrix vector size mismatch throws
+8/68 Test: Matrix vector size mismatch throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix vector size mismatch throws"
+Directory: D:/Neural network/build
+"Matrix vector size mismatch throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix vector size mismatch throws"
+Randomness seeded to: 691994506
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix vector size mismatch throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix vector size mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/68 Testing: Matrix::zeros
+9/68 Test: Matrix::zeros
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::zeros"
+Directory: D:/Neural network/build
+"Matrix::zeros" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::zeros"
+Randomness seeded to: 4115370514
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::zeros" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::zeros" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/68 Testing: Matrix::ones
+10/68 Test: Matrix::ones
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::ones"
+Directory: D:/Neural network/build
+"Matrix::ones" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::ones"
+Randomness seeded to: 833013701
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::ones" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::ones" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/68 Testing: Matrix::identity
+11/68 Test: Matrix::identity
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::identity"
+Directory: D:/Neural network/build
+"Matrix::identity" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::identity"
+Randomness seeded to: 212642529
+===============================================================================
+All tests passed (11 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::identity" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/68 Testing: Matrix::random_uniform range
+12/68 Test: Matrix::random_uniform range
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::random_uniform range"
+Directory: D:/Neural network/build
+"Matrix::random_uniform range" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::random_uniform range"
+Randomness seeded to: 1512138769
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::random_uniform range" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::random_uniform range" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/68 Testing: Matrix::random_uniform low > high throws
+13/68 Test: Matrix::random_uniform low > high throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::random_uniform low > high throws"
+Directory: D:/Neural network/build
+"Matrix::random_uniform low > high throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::random_uniform low > high throws"
+Randomness seeded to: 545601437
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::random_uniform low > high throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::random_uniform low > high throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/68 Testing: Matrix::random_normal shape
+14/68 Test: Matrix::random_normal shape
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::random_normal shape"
+Directory: D:/Neural network/build
+"Matrix::random_normal shape" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::random_normal shape"
+Randomness seeded to: 1779489790
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::random_normal shape" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::random_normal shape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/68 Testing: Matrix::random_normal negative stddev throws
+15/68 Test: Matrix::random_normal negative stddev throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::random_normal negative stddev throws"
+Directory: D:/Neural network/build
+"Matrix::random_normal negative stddev throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::random_normal negative stddev throws"
+Randomness seeded to: 3351212759
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::random_normal negative stddev throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::random_normal negative stddev throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/68 Testing: Matrix::xavier_uniform shape and range
+16/68 Test: Matrix::xavier_uniform shape and range
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::xavier_uniform shape and range"
+Directory: D:/Neural network/build
+"Matrix::xavier_uniform shape and range" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::xavier_uniform shape and range"
+Randomness seeded to: 2222636921
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::xavier_uniform shape and range" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::xavier_uniform shape and range" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/68 Testing: Matrix::xavier_normal shape
+17/68 Test: Matrix::xavier_normal shape
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::xavier_normal shape"
+Directory: D:/Neural network/build
+"Matrix::xavier_normal shape" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::xavier_normal shape"
+Randomness seeded to: 3447517737
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::xavier_normal shape" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::xavier_normal shape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+18/68 Testing: Matrix::he_uniform shape
+18/68 Test: Matrix::he_uniform shape
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::he_uniform shape"
+Directory: D:/Neural network/build
+"Matrix::he_uniform shape" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::he_uniform shape"
+Randomness seeded to: 938876774
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::he_uniform shape" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::he_uniform shape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+19/68 Testing: Matrix::he_normal shape
+19/68 Test: Matrix::he_normal shape
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix::he_normal shape"
+Directory: D:/Neural network/build
+"Matrix::he_normal shape" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix::he_normal shape"
+Randomness seeded to: 1087485533
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix::he_normal shape" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix::he_normal shape" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/68 Testing: Matrix operator() read and write
+20/68 Test: Matrix operator() read and write
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator() read and write"
+Directory: D:/Neural network/build
+"Matrix operator() read and write" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator() read and write"
+Randomness seeded to: 2469951747
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator() read and write" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator() read and write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/68 Testing: Matrix at() read and write
+21/68 Test: Matrix at() read and write
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix at() read and write"
+Directory: D:/Neural network/build
+"Matrix at() read and write" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix at() read and write"
+Randomness seeded to: 2861133894
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix at() read and write" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix at() read and write" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/68 Testing: Matrix at() row out of range throws
+22/68 Test: Matrix at() row out of range throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix at() row out of range throws"
+Directory: D:/Neural network/build
+"Matrix at() row out of range throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix at() row out of range throws"
+Randomness seeded to: 4057522285
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix at() row out of range throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix at() row out of range throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/68 Testing: Matrix at() col out of range throws
+23/68 Test: Matrix at() col out of range throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix at() col out of range throws"
+Directory: D:/Neural network/build
+"Matrix at() col out of range throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix at() col out of range throws"
+Randomness seeded to: 428505550
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix at() col out of range throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix at() col out of range throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+24/68 Testing: Matrix data() pointer is row-major
+24/68 Test: Matrix data() pointer is row-major
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix data() pointer is row-major"
+Directory: D:/Neural network/build
+"Matrix data() pointer is row-major" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix data() pointer is row-major"
+Randomness seeded to: 431223850
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix data() pointer is row-major" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix data() pointer is row-major" time elapsed: 00:00:00
+----------------------------------------------------------
+
+25/68 Testing: Matrix operator+
+25/68 Test: Matrix operator+
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator+"
+Directory: D:/Neural network/build
+"Matrix operator+" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator+"
+Randomness seeded to: 1332682903
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator+" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator+" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/68 Testing: Matrix operator-
+26/68 Test: Matrix operator-
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator-"
+Directory: D:/Neural network/build
+"Matrix operator-" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator-"
+Randomness seeded to: 3037575874
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator-" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator-" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/68 Testing: Matrix operator+=
+27/68 Test: Matrix operator+=
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator+="
+Directory: D:/Neural network/build
+"Matrix operator+=" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator+="
+Randomness seeded to: 565329473
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator+=" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator+=" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/68 Testing: Matrix operator-=
+28/68 Test: Matrix operator-=
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator-="
+Directory: D:/Neural network/build
+"Matrix operator-=" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator-="
+Randomness seeded to: 1215138059
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator-=" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator-=" time elapsed: 00:00:00
+----------------------------------------------------------
+
+29/68 Testing: Matrix scalar multiply member
+29/68 Test: Matrix scalar multiply member
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix scalar multiply member"
+Directory: D:/Neural network/build
+"Matrix scalar multiply member" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix scalar multiply member"
+Randomness seeded to: 2133690490
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix scalar multiply member" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix scalar multiply member" time elapsed: 00:00:00
+----------------------------------------------------------
+
+30/68 Testing: Matrix scalar multiply free function
+30/68 Test: Matrix scalar multiply free function
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix scalar multiply free function"
+Directory: D:/Neural network/build
+"Matrix scalar multiply free function" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix scalar multiply free function"
+Randomness seeded to: 1185826572
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix scalar multiply free function" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix scalar multiply free function" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/68 Testing: Matrix scalar divide
+31/68 Test: Matrix scalar divide
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix scalar divide"
+Directory: D:/Neural network/build
+"Matrix scalar divide" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix scalar divide"
+Randomness seeded to: 1303318425
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix scalar divide" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix scalar divide" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/68 Testing: Matrix divide by zero throws
+32/68 Test: Matrix divide by zero throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix divide by zero throws"
+Directory: D:/Neural network/build
+"Matrix divide by zero throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix divide by zero throws"
+Randomness seeded to: 28546309
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix divide by zero throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix divide by zero throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+33/68 Testing: Matrix unary negation
+33/68 Test: Matrix unary negation
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix unary negation"
+Directory: D:/Neural network/build
+"Matrix unary negation" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix unary negation"
+Randomness seeded to: 2998073810
+===============================================================================
+All tests passed (5 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix unary negation" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix unary negation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+34/68 Testing: Matrix element-wise dimension mismatch throws
+34/68 Test: Matrix element-wise dimension mismatch throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix element-wise dimension mismatch throws"
+Directory: D:/Neural network/build
+"Matrix element-wise dimension mismatch throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix element-wise dimension mismatch throws"
+Randomness seeded to: 3915214270
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix element-wise dimension mismatch throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix element-wise dimension mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+35/68 Testing: Matrix multiply 2x3 * 3x2 = 2x2
+35/68 Test: Matrix multiply 2x3 * 3x2 = 2x2
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix multiply 2x3 * 3x2 = 2x2"
+Directory: D:/Neural network/build
+"Matrix multiply 2x3 * 3x2 = 2x2" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply 2x3 * 3x2 = 2x2"
+Randomness seeded to: 705419311
+===============================================================================
+All tests passed (6 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply 2x3 * 3x2 = 2x2" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix multiply 2x3 * 3x2 = 2x2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/68 Testing: Matrix multiply identity leaves matrix unchanged
+36/68 Test: Matrix multiply identity leaves matrix unchanged
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix multiply identity leaves matrix unchanged"
+Directory: D:/Neural network/build
+"Matrix multiply identity leaves matrix unchanged" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply identity leaves matrix unchanged"
+Randomness seeded to: 1590328142
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply identity leaves matrix unchanged" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix multiply identity leaves matrix unchanged" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/68 Testing: Matrix multiply 1x1
+37/68 Test: Matrix multiply 1x1
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix multiply 1x1"
+Directory: D:/Neural network/build
+"Matrix multiply 1x1" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply 1x1"
+Randomness seeded to: 2386634520
+===============================================================================
+All tests passed (3 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply 1x1" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix multiply 1x1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+38/68 Testing: Matrix multiply dimension mismatch throws
+38/68 Test: Matrix multiply dimension mismatch throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix multiply dimension mismatch throws"
+Directory: D:/Neural network/build
+"Matrix multiply dimension mismatch throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix multiply dimension mismatch throws"
+Randomness seeded to: 1703195291
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix multiply dimension mismatch throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix multiply dimension mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+39/68 Testing: Matrix hadamard product
+39/68 Test: Matrix hadamard product
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix hadamard product"
+Directory: D:/Neural network/build
+"Matrix hadamard product" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix hadamard product"
+Randomness seeded to: 752216657
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix hadamard product" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix hadamard product" time elapsed: 00:00:00
+----------------------------------------------------------
+
+40/68 Testing: Matrix hadamard dimension mismatch throws
+40/68 Test: Matrix hadamard dimension mismatch throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix hadamard dimension mismatch throws"
+Directory: D:/Neural network/build
+"Matrix hadamard dimension mismatch throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix hadamard dimension mismatch throws"
+Randomness seeded to: 2891327509
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix hadamard dimension mismatch throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix hadamard dimension mismatch throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/68 Testing: Matrix transpose 2x3 -> 3x2
+41/68 Test: Matrix transpose 2x3 -> 3x2
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix transpose 2x3 -> 3x2"
+Directory: D:/Neural network/build
+"Matrix transpose 2x3 -> 3x2" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix transpose 2x3 -> 3x2"
+Randomness seeded to: 2204282567
+===============================================================================
+All tests passed (8 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix transpose 2x3 -> 3x2" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix transpose 2x3 -> 3x2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/68 Testing: Matrix transpose is its own inverse
+42/68 Test: Matrix transpose is its own inverse
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix transpose is its own inverse"
+Directory: D:/Neural network/build
+"Matrix transpose is its own inverse" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix transpose is its own inverse"
+Randomness seeded to: 1836338194
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix transpose is its own inverse" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix transpose is its own inverse" time elapsed: 00:00:00
+----------------------------------------------------------
+
+43/68 Testing: Matrix square transpose
+43/68 Test: Matrix square transpose
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix square transpose"
+Directory: D:/Neural network/build
+"Matrix square transpose" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix square transpose"
+Randomness seeded to: 3339362641
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix square transpose" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix square transpose" time elapsed: 00:00:00
+----------------------------------------------------------
+
+44/68 Testing: Matrix sum
+44/68 Test: Matrix sum
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix sum"
+Directory: D:/Neural network/build
+"Matrix sum" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix sum"
+Randomness seeded to: 328605933
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix sum" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix sum" time elapsed: 00:00:00
+----------------------------------------------------------
+
+45/68 Testing: Matrix mean
+45/68 Test: Matrix mean
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix mean"
+Directory: D:/Neural network/build
+"Matrix mean" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix mean"
+Randomness seeded to: 2598028025
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix mean" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix mean" time elapsed: 00:00:00
+----------------------------------------------------------
+
+46/68 Testing: Matrix min
+46/68 Test: Matrix min
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix min"
+Directory: D:/Neural network/build
+"Matrix min" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix min"
+Randomness seeded to: 1506033002
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix min" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix min" time elapsed: 00:00:00
+----------------------------------------------------------
+
+47/68 Testing: Matrix max
+47/68 Test: Matrix max
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix max"
+Directory: D:/Neural network/build
+"Matrix max" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix max"
+Randomness seeded to: 2339202586
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix max" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix max" time elapsed: 00:00:00
+----------------------------------------------------------
+
+48/68 Testing: Matrix frobenius_norm
+48/68 Test: Matrix frobenius_norm
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix frobenius_norm"
+Directory: D:/Neural network/build
+"Matrix frobenius_norm" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix frobenius_norm"
+Randomness seeded to: 81894981
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix frobenius_norm" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix frobenius_norm" time elapsed: 00:00:00
+----------------------------------------------------------
+
+49/68 Testing: Matrix sum and frobenius_norm on empty matrix
+49/68 Test: Matrix sum and frobenius_norm on empty matrix
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix sum and frobenius_norm on empty matrix"
+Directory: D:/Neural network/build
+"Matrix sum and frobenius_norm on empty matrix" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix sum and frobenius_norm on empty matrix"
+Randomness seeded to: 4106417627
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix sum and frobenius_norm on empty matrix" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix sum and frobenius_norm on empty matrix" time elapsed: 00:00:00
+----------------------------------------------------------
+
+50/68 Testing: Matrix mean on empty matrix throws
+50/68 Test: Matrix mean on empty matrix throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix mean on empty matrix throws"
+Directory: D:/Neural network/build
+"Matrix mean on empty matrix throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix mean on empty matrix throws"
+Randomness seeded to: 1926303045
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix mean on empty matrix throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix mean on empty matrix throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+51/68 Testing: Matrix min on empty matrix throws
+51/68 Test: Matrix min on empty matrix throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix min on empty matrix throws"
+Directory: D:/Neural network/build
+"Matrix min on empty matrix throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix min on empty matrix throws"
+Randomness seeded to: 1369429770
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix min on empty matrix throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix min on empty matrix throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+52/68 Testing: Matrix max on empty matrix throws
+52/68 Test: Matrix max on empty matrix throws
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix max on empty matrix throws"
+Directory: D:/Neural network/build
+"Matrix max on empty matrix throws" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix max on empty matrix throws"
+Randomness seeded to: 1980633703
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix max on empty matrix throws" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix max on empty matrix throws" time elapsed: 00:00:00
+----------------------------------------------------------
+
+53/68 Testing: Matrix apply identity
+53/68 Test: Matrix apply identity
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix apply identity"
+Directory: D:/Neural network/build
+"Matrix apply identity" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix apply identity"
+Randomness seeded to: 1624734156
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix apply identity" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix apply identity" time elapsed: 00:00:00
+----------------------------------------------------------
+
+54/68 Testing: Matrix apply ReLU
+54/68 Test: Matrix apply ReLU
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix apply ReLU"
+Directory: D:/Neural network/build
+"Matrix apply ReLU" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix apply ReLU"
+Randomness seeded to: 2092016910
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix apply ReLU" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix apply ReLU" time elapsed: 00:00:00
+----------------------------------------------------------
+
+55/68 Testing: Matrix apply square
+55/68 Test: Matrix apply square
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix apply square"
+Directory: D:/Neural network/build
+"Matrix apply square" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix apply square"
+Randomness seeded to: 524202705
+===============================================================================
+All tests passed (4 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix apply square" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix apply square" time elapsed: 00:00:00
+----------------------------------------------------------
+
+56/68 Testing: Matrix apply does not modify original
+56/68 Test: Matrix apply does not modify original
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix apply does not modify original"
+Directory: D:/Neural network/build
+"Matrix apply does not modify original" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix apply does not modify original"
+Randomness seeded to: 2998653914
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix apply does not modify original" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix apply does not modify original" time elapsed: 00:00:00
+----------------------------------------------------------
+
+57/68 Testing: Matrix operator== equal matrices
+57/68 Test: Matrix operator== equal matrices
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator== equal matrices"
+Directory: D:/Neural network/build
+"Matrix operator== equal matrices" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator== equal matrices"
+Randomness seeded to: 3160368230
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator== equal matrices" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator== equal matrices" time elapsed: 00:00:00
+----------------------------------------------------------
+
+58/68 Testing: Matrix operator!= different values
+58/68 Test: Matrix operator!= different values
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator!= different values"
+Directory: D:/Neural network/build
+"Matrix operator!= different values" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator!= different values"
+Randomness seeded to: 2660031413
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator!= different values" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator!= different values" time elapsed: 00:00:00
+----------------------------------------------------------
+
+59/68 Testing: Matrix operator!= different dimensions
+59/68 Test: Matrix operator!= different dimensions
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix operator!= different dimensions"
+Directory: D:/Neural network/build
+"Matrix operator!= different dimensions" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix operator!= different dimensions"
+Randomness seeded to: 2995637732
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix operator!= different dimensions" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix operator!= different dimensions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+60/68 Testing: Matrix approx_equal within tolerance
+60/68 Test: Matrix approx_equal within tolerance
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix approx_equal within tolerance"
+Directory: D:/Neural network/build
+"Matrix approx_equal within tolerance" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix approx_equal within tolerance"
+Randomness seeded to: 935985299
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix approx_equal within tolerance" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix approx_equal within tolerance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+61/68 Testing: Matrix approx_equal outside tolerance
+61/68 Test: Matrix approx_equal outside tolerance
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix approx_equal outside tolerance"
+Directory: D:/Neural network/build
+"Matrix approx_equal outside tolerance" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix approx_equal outside tolerance"
+Randomness seeded to: 113333303
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix approx_equal outside tolerance" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix approx_equal outside tolerance" time elapsed: 00:00:00
+----------------------------------------------------------
+
+62/68 Testing: Matrix approx_equal different dimensions
+62/68 Test: Matrix approx_equal different dimensions
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix approx_equal different dimensions"
+Directory: D:/Neural network/build
+"Matrix approx_equal different dimensions" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix approx_equal different dimensions"
+Randomness seeded to: 2029931005
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix approx_equal different dimensions" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix approx_equal different dimensions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+63/68 Testing: Matrix A * I = A
+63/68 Test: Matrix A * I = A
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix A * I = A"
+Directory: D:/Neural network/build
+"Matrix A * I = A" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix A * I = A"
+Randomness seeded to: 1822533551
+===============================================================================
+All tests passed (2 assertions in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix A * I = A" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix A * I = A" time elapsed: 00:00:00
+----------------------------------------------------------
+
+64/68 Testing: Matrix (A + B)^T = A^T + B^T
+64/68 Test: Matrix (A + B)^T = A^T + B^T
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix (A + B)^T = A^T + B^T"
+Directory: D:/Neural network/build
+"Matrix (A + B)^T = A^T + B^T" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix (A + B)^T = A^T + B^T"
+Randomness seeded to: 3504003477
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix (A + B)^T = A^T + B^T" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix (A + B)^T = A^T + B^T" time elapsed: 00:00:00
+----------------------------------------------------------
+
+65/68 Testing: Matrix (AB)^T = B^T * A^T
+65/68 Test: Matrix (AB)^T = B^T * A^T
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix (AB)^T = B^T * A^T"
+Directory: D:/Neural network/build
+"Matrix (AB)^T = B^T * A^T" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix (AB)^T = B^T * A^T"
+Randomness seeded to: 1787370848
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix (AB)^T = B^T * A^T" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix (AB)^T = B^T * A^T" time elapsed: 00:00:00
+----------------------------------------------------------
+
+66/68 Testing: Matrix scalar distributes over addition: k*(A+B) = kA + kB
+66/68 Test: Matrix scalar distributes over addition: k*(A+B) = kA + kB
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix scalar distributes over addition: k*(A+B) = kA + kB"
+Directory: D:/Neural network/build
+"Matrix scalar distributes over addition: k*(A+B) = kA + kB" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix scalar distributes over addition: k*(A+B) = kA + kB"
+Randomness seeded to: 831690536
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix scalar distributes over addition: k*(A+B) = kA + kB" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix scalar distributes over addition: k*(A+B) = kA + kB" time elapsed: 00:00:00
+----------------------------------------------------------
+
+67/68 Testing: Matrix hadamard is commutative
+67/68 Test: Matrix hadamard is commutative
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix hadamard is commutative"
+Directory: D:/Neural network/build
+"Matrix hadamard is commutative" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix hadamard is commutative"
+Randomness seeded to: 3304313334
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix hadamard is commutative" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix hadamard is commutative" time elapsed: 00:00:00
+----------------------------------------------------------
+
+68/68 Testing: Matrix seeded random is reproducible
+68/68 Test: Matrix seeded random is reproducible
+Command: "D:/Neural network/build/Release/neuronix_tests.exe" "Matrix seeded random is reproducible"
+Directory: D:/Neural network/build
+"Matrix seeded random is reproducible" start time: Jun 08 01:08 Bangladesh Standard Time
+Output:
+----------------------------------------------------------
+Filters: "Matrix seeded random is reproducible"
+Randomness seeded to: 4063946187
+===============================================================================
+All tests passed (1 assertion in 1 test case)
+
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"Matrix seeded random is reproducible" end time: Jun 08 01:08 Bangladesh Standard Time
+"Matrix seeded random is reproducible" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 08 01:08 Bangladesh Standard Time

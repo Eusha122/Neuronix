@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\476191c0aab5960f999bf7f918cc5470\catch2-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\1b7eb6590d7e4115efde437229fa9f72\catch2-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\808d4edfd01046a089d1b471d8615576\catch2-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Neural network\build\_deps\catch2-subbuild\CMakeFiles\catch2-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{DC1F93BA-2BFC-3881-9BC7-656A639658BD}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

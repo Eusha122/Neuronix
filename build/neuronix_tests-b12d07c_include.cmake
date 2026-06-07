@@ -1,0 +1,5 @@
+if(EXISTS "D:/Neural network/build/neuronix_tests-b12d07c_tests.cmake")
+  include("D:/Neural network/build/neuronix_tests-b12d07c_tests.cmake")
+else()
+  add_test(neuronix_tests_NOT_BUILT-b12d07c neuronix_tests_NOT_BUILT-b12d07c)
+endif()

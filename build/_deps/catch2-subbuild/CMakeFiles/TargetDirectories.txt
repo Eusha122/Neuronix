@@ -1,0 +1,3 @@
+D:/Neural network/build/_deps/catch2-subbuild/CMakeFiles/catch2-populate.dir
+D:/Neural network/build/_deps/catch2-subbuild/CMakeFiles/ALL_BUILD.dir
+D:/Neural network/build/_deps/catch2-subbuild/CMakeFiles/ZERO_CHECK.dir
