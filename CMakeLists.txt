@@ -28,6 +28,9 @@ add_library(neuronix
     src/neuronix.cpp
     src/core/matrix.cpp
     src/core/tensor.cpp
+    src/layers/dense.cpp
+    src/activations/softmax.cpp
+    src/models/model.cpp
 )
 
 add_library(Neuronix::neuronix ALIAS neuronix)
@@ -64,6 +67,9 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/smoke_test.cpp
         tests/matrix_tests.cpp
         tests/tensor_tests.cpp
+        tests/dense_tests.cpp
+        tests/activation_tests.cpp
+        tests/model_tests.cpp
     )
 
     target_link_libraries(neuronix_tests
