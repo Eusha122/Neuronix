@@ -29,6 +29,7 @@
 #include "neuronix/data/mnist_loader.hpp"
 #include "neuronix/data/cifar10_loader.hpp"
 #include "neuronix/data/face_loader.hpp"
+#include "neuronix/data/emnist_loader.hpp"
 #include "neuronix/data/data_loader.hpp"
 #include "neuronix/data/augmentation.hpp"
 #include "neuronix/metrics/accuracy.hpp"

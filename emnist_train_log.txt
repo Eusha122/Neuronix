@@ -1,0 +1,47 @@
+Loading EMNIST-Letters from: data/emnist
+Train: 124800   Test: 20800   Classes: 26 (A-Z)
+
+Model Summary
+====================================
+Layer               Params    
+------------------------------------
+Conv2D              160       
+ReLU                0         
+MaxPool2D           0         
+Conv2D              4640      
+ReLU                0         
+MaxPool2D           0         
+Flatten             0         
+Dense               401664    
+BatchNorm           512       
+ReLU                0         
+Dropout             0         
+Dense               6682      
+====================================
+Total params: 413658
+Training: 20 epochs, batch=128, AdamW lr=1e-3 wd=0.01 -> 1e-4 (cosine)
+Expected: ~4-5 min/epoch on Ryzen 7 5700G (~90 min total)
+========================================================================
+Epoch 1   loss=1.3683  test_acc=0.8436 *  lr=9.94e-04  315.1s
+Epoch 2   loss=0.6596  test_acc=0.8739 *  lr=9.78e-04  312.5s
+Epoch 3   loss=0.5128  test_acc=0.8842 *  lr=9.51e-04  310.8s
+Epoch 4   loss=0.4421  test_acc=0.8967 *  lr=9.14e-04  295.9s
+Epoch 5   loss=0.3983  test_acc=0.8984 *  lr=8.68e-04  289.0s
+Epoch 6   loss=0.3670  test_acc=0.9047 *  lr=8.15e-04  302.3s
+Epoch 7   loss=0.3469  test_acc=0.9043    lr=7.54e-04  319.0s
+Epoch 8   loss=0.3261  test_acc=0.9093 *  lr=6.89e-04  300.5s
+Epoch 9   loss=0.3099  test_acc=0.9075    lr=6.20e-04  298.8s
+Epoch 10  loss=0.2965  test_acc=0.9128 *  lr=5.50e-04  334.3s
+Epoch 11  loss=0.2852  test_acc=0.9132 *  lr=4.80e-04  299.5s
+Epoch 12  loss=0.2744  test_acc=0.9143 *  lr=4.11e-04  284.8s
+Epoch 13  loss=0.2675  test_acc=0.9149 *  lr=3.46e-04  285.7s
+Epoch 14  loss=0.2566  test_acc=0.9179 *  lr=2.85e-04  768.9s
+Epoch 15  loss=0.2508  test_acc=0.9165    lr=2.32e-04  285.8s
+Epoch 16  loss=0.2454  test_acc=0.9167    lr=1.86e-04  279.5s
+Epoch 17  loss=0.2393  test_acc=0.9159    lr=1.49e-04  280.3s
+Epoch 18  loss=0.2351  test_acc=0.9176    lr=1.22e-04  302.9s
+Epoch 19  loss=0.2322  test_acc=0.9186 *  lr=1.06e-04  285.1s
+Epoch 20  loss=0.2272  test_acc=0.9174    lr=1.00e-04  285.0s
+
+Best test accuracy: 0.9186
+Model saved to emnist_letters.nnx

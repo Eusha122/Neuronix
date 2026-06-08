@@ -1,16 +1,63 @@
 # Neuronix
 
-Neuronix is a modern C++20 neural network framework built from absolute scratch.
+A modern C++20 neural network framework built from absolute scratch — no external math or ML libraries (no Eigen, OpenBLAS, OpenCV, PyTorch, TensorFlow).
 
-The long-term goal is to grow into a modular AI engine that can support dense neural networks, tensors, CNNs, image classification, face authentication, model serialization, GPU acceleration, and production inference pipelines.
+## Results
 
-Phase 1 is foundation only. It intentionally does not implement Matrix, Tensor, layers, optimizers, losses, serialization formats, or training behavior.
+| Task | Model | Accuracy |
+|------|-------|----------|
+| Image classification | CIFAR-10 CNN | 75.91% |
+| Face vs. no-face | LFW binary classifier | 99.72% |
+| Digit recognition | MNIST CNN | 99.18% |
+| Handwriting A–Z | EMNIST Letters CNN | 91.86% |
+
+## Features
+
+- **Layers** — Dense, Conv2D (im2col), MaxPool2D, BatchNorm, Flatten, Dropout
+- **Activations** — ReLU, LeakyReLU, GELU, Sigmoid, Tanh, Softmax
+- **Optimizers** — SGD, Adam, AdamW
+- **LR Schedulers** — StepLR, CosineAnnealingLR
+- **Losses** — CrossEntropyLoss, MSELoss
+- **Data loaders** — MNIST, CIFAR-10, EMNIST Letters, LFW faces
+- **Augmentation** — RandomHorizontalFlip, RandomCrop, per-channel normalize
+- **Model I/O** — save/load to `.nnx` binary format
+- **OpenMP** parallel matrix multiply (6× speedup on multi-core)
 
 ## Build
 
 ```powershell
-cmake -S . -B build -DNEURONIX_BUILD_TESTS=ON
-cmake --build build
+cmake -S . -B build -DNEURONIX_BUILD_TESTS=ON -DNEURONIX_BUILD_EXAMPLES=ON
+cmake --build build --config Release
+```
+
+## Examples
+
+```powershell
+# MNIST digit recognition (99.18%)
+.\build\Release\neuronix_lenet.exe
+
+# CIFAR-10 image classification (75.91%)
+.\build\Release\neuronix_cifar10.exe
+
+# Face vs. no-face classifier (99.72%)
+.\build\Release\neuronix_face.exe
+
+# Handwriting A-Z recognition (91.86%)
+.\build\Release\neuronix_emnist.exe
+```
+
+## Dataset Setup
+
+```powershell
+# MNIST — place the 4 IDX files in data/mnist/
+# CIFAR-10
+python scripts/prepare_cifar10.py
+
+# LFW faces
+python scripts/prepare_lfw.py
+
+# EMNIST Letters
+python scripts/prepare_emnist.py
 ```
 
 ## Test
@@ -19,26 +66,10 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-## Optional Targets
+## Design Constraints
 
-```powershell
-cmake -S . -B build -DNEURONIX_BUILD_EXAMPLES=ON
-cmake -S . -B build -DNEURONIX_BUILD_BENCHMARKS=ON
-```
-
-## Current Status
-
-- C++20 CMake project foundation
-- Public/private source layout
-- Catch2 smoke test
-- GitHub Actions configure/build/test workflow
-- Example executable
-- Benchmark scaffold
-- Architecture and roadmap documentation
-
-## Non-Goals For Phase 1
-
-- No TensorFlow, PyTorch, Keras, or external machine learning frameworks
-- No external math libraries
-- No Matrix or Tensor implementation yet
-- No training, inference, serialization, logging, image, or GPU implementation yet
+- C++20 throughout (MSVC / GCC / Clang)
+- No external math or ML libraries
+- Public API only in `include/neuronix/`
+- Private implementation only in `src/`
+- Catch2 v3 as test framework

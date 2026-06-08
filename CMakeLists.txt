@@ -38,6 +38,7 @@ add_library(neuronix
     src/data/mnist_loader.cpp
     src/data/cifar10_loader.cpp
     src/data/face_loader.cpp
+    src/data/emnist_loader.cpp
     src/data/data_loader.cpp
     src/metrics/accuracy.cpp
 )
@@ -141,6 +142,11 @@ if(NEURONIX_BUILD_EXAMPLES)
         examples/face_classify.cpp
     )
     target_link_libraries(neuronix_face PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_emnist
+        examples/emnist_train.cpp
+    )
+    target_link_libraries(neuronix_emnist PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)
