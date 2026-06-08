@@ -29,6 +29,8 @@ public:
     void update(double lr) override;
     void adam_step(double lr, double beta1, double beta2,
                    double eps, std::size_t t) override;
+    void adamw_step(double lr, double beta1, double beta2,
+                    double eps, double wd, std::size_t t) override;
     void zero_grad() override;
 
     [[nodiscard]] std::string_view name()        const noexcept override { return "Conv2D"; }

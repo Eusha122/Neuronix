@@ -25,3 +25,9 @@ out/
 
 # CMake generated
 CMakeSettings.json
+
+# Datasets and binary data (too large for git)
+data/
+
+# Trained model files
+*.nnx

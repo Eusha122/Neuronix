@@ -12,6 +12,8 @@
 #include "neuronix/layers/batch_norm.hpp"
 #include "neuronix/layers/flatten.hpp"
 #include "neuronix/activations/relu.hpp"
+#include "neuronix/activations/leaky_relu.hpp"
+#include "neuronix/activations/gelu.hpp"
 #include "neuronix/activations/sigmoid.hpp"
 #include "neuronix/activations/tanh_activation.hpp"
 #include "neuronix/activations/softmax.hpp"
@@ -22,9 +24,13 @@
 #include "neuronix/models/model.hpp"
 #include "neuronix/optimizers/sgd.hpp"
 #include "neuronix/optimizers/adam.hpp"
+#include "neuronix/optimizers/adamw.hpp"
 #include "neuronix/optimizers/lr_scheduler.hpp"
 #include "neuronix/data/mnist_loader.hpp"
+#include "neuronix/data/cifar10_loader.hpp"
+#include "neuronix/data/face_loader.hpp"
 #include "neuronix/data/data_loader.hpp"
+#include "neuronix/data/augmentation.hpp"
 #include "neuronix/metrics/accuracy.hpp"
 
 namespace neuronix {

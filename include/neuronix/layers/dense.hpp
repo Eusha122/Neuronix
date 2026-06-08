@@ -26,6 +26,10 @@ public:
     void adam_step(double lr, double beta1, double beta2,
                    double eps, std::size_t t) override;
 
+    // AdamW: decoupled weight decay on weights_, then Adam update
+    void adamw_step(double lr, double beta1, double beta2,
+                    double eps, double wd, std::size_t t) override;
+
     // Zero accumulated gradients
     void zero_grad() override;
 

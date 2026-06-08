@@ -37,6 +37,11 @@ public:
     virtual void adam_step(double /*lr*/, double /*beta1*/, double /*beta2*/,
                            double /*eps*/, std::size_t /*t*/) {}
 
+    // AdamW update — decoupled weight decay applied to weights before Adam update.
+    // wd = weight-decay coefficient (typical: 0.01).
+    virtual void adamw_step(double /*lr*/, double /*beta1*/, double /*beta2*/,
+                            double /*eps*/, double /*wd*/, std::size_t /*t*/) {}
+
     // Zero accumulated gradients. Default: no-op.
     virtual void zero_grad() {}
 

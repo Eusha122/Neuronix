@@ -13,6 +13,8 @@
 #include "neuronix/activations/tanh_activation.hpp"
 #include "neuronix/activations/softmax.hpp"
 #include "neuronix/activations/dropout.hpp"
+#include "neuronix/activations/leaky_relu.hpp"
+#include "neuronix/activations/gelu.hpp"
 #include "neuronix/layers/batch_norm.hpp"
 #include "neuronix/layers/flatten.hpp"
 
@@ -55,6 +57,12 @@ void Model::adam_step(double lr, double beta1, double beta2,
                       double eps, std::size_t t) {
     for (auto& layer : layers_)
         layer->adam_step(lr, beta1, beta2, eps, t);
+}
+
+void Model::adamw_step(double lr, double beta1, double beta2,
+                       double eps, double wd, std::size_t t) {
+    for (auto& layer : layers_)
+        layer->adamw_step(lr, beta1, beta2, eps, wd, t);
 }
 
 void Model::zero_grad() {
@@ -111,16 +119,18 @@ void Model::summary() const {
 namespace {
 
 enum class LayerTypeId : uint8_t {
-    Dense     = 0,
-    ReLU      = 1,
-    Sigmoid   = 2,
-    Tanh      = 3,
-    Softmax   = 4,
-    Conv2D    = 5,
-    MaxPool2D = 6,
-    Dropout   = 7,
-    BatchNorm = 8,
-    Flatten   = 9,
+    Dense      = 0,
+    ReLU       = 1,
+    Sigmoid    = 2,
+    Tanh       = 3,
+    Softmax    = 4,
+    Conv2D     = 5,
+    MaxPool2D  = 6,
+    Dropout    = 7,
+    BatchNorm  = 8,
+    Flatten    = 9,
+    LeakyReLU  = 10,
+    GELU       = 11,
 };
 
 constexpr char     kMagic[4] = {'N','X','N','N'};
@@ -203,6 +213,11 @@ void neuronix::Model::save(const std::string& path) const {
             write_f64(os, dr->drop_rate());
         } else if (dynamic_cast<const Flatten*>(layer.get())) {
             write_u8(os, static_cast<uint8_t>(LayerTypeId::Flatten));
+        } else if (auto* lr = dynamic_cast<const LeakyReLU*>(layer.get())) {
+            write_u8(os, static_cast<uint8_t>(LayerTypeId::LeakyReLU));
+            write_f64(os, lr->alpha());
+        } else if (dynamic_cast<const GELU*>(layer.get())) {
+            write_u8(os, static_cast<uint8_t>(LayerTypeId::GELU));
         } else if (auto* bn = dynamic_cast<const BatchNorm*>(layer.get())) {
             write_u8(os,  static_cast<uint8_t>(LayerTypeId::BatchNorm));
             write_u32(os, static_cast<uint32_t>(bn->num_features()));
@@ -286,6 +301,14 @@ neuronix::Model neuronix::Model::load(const std::string& path) {
             }
             case LayerTypeId::Flatten:
                 model.add<Flatten>();
+                break;
+            case LayerTypeId::LeakyReLU: {
+                double alpha = read_f64(is);
+                model.add<LeakyReLU>(alpha);
+                break;
+            }
+            case LayerTypeId::GELU:
+                model.add<GELU>();
                 break;
             case LayerTypeId::BatchNorm: {
                 auto   nf  = static_cast<std::size_t>(read_u32(is));

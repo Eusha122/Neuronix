@@ -36,6 +36,8 @@ add_library(neuronix
     src/losses/mse_loss.cpp
     src/losses/cross_entropy_loss.cpp
     src/data/mnist_loader.cpp
+    src/data/cifar10_loader.cpp
+    src/data/face_loader.cpp
     src/data/data_loader.cpp
     src/metrics/accuracy.cpp
 )
@@ -129,6 +131,16 @@ if(NEURONIX_BUILD_EXAMPLES)
         examples/lenet_mnist.cpp
     )
     target_link_libraries(neuronix_lenet PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_cifar10
+        examples/cifar10_train.cpp
+    )
+    target_link_libraries(neuronix_cifar10 PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_face
+        examples/face_classify.cpp
+    )
+    target_link_libraries(neuronix_face PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)

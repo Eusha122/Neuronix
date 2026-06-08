@@ -38,6 +38,10 @@ public:
     void adam_step(double lr, double beta1, double beta2,
                    double eps, std::size_t t);
 
+    // Apply one AdamW step (Adam + decoupled weight decay) to all trainable layers.
+    void adamw_step(double lr, double beta1, double beta2,
+                    double eps, double wd, std::size_t t);
+
     // Zero all accumulated gradients.
     void zero_grad();
 

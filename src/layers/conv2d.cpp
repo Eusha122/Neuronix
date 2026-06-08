@@ -215,6 +215,12 @@ void Conv2D::adam_step(double lr, double beta1, double beta2,
     }
 }
 
+void Conv2D::adamw_step(double lr, double beta1, double beta2,
+                        double eps, double wd, std::size_t t) {
+    weights_ *= (1.0 - lr * wd);
+    adam_step(lr, beta1, beta2, eps, t);
+}
+
 void Conv2D::zero_grad() {
     grad_weights_ = Matrix::zeros(out_, in_ * K_ * K_);
     grad_bias_    = Matrix::zeros(out_, 1);

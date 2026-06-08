@@ -82,6 +82,14 @@ void Dense::adam_step(double lr, double beta1, double beta2,
     }
 }
 
+void Dense::adamw_step(double lr, double beta1, double beta2,
+                       double eps, double wd, std::size_t t) {
+    // Decoupled weight decay: shrink weights independent of gradient magnitude
+    weights_ *= (1.0 - lr * wd);
+    // Standard Adam update for both weights and bias
+    adam_step(lr, beta1, beta2, eps, t);
+}
+
 void Dense::zero_grad() {
     grad_weights_ = Matrix::zeros(out_, in_);
     grad_bias_    = Matrix::zeros(out_, 1);
