@@ -56,6 +56,14 @@ else()
     target_compile_options(neuronix PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+    target_link_libraries(neuronix PUBLIC OpenMP::OpenMP_CXX)
+    message(STATUS "OpenMP found — parallel matmul enabled")
+else()
+    message(STATUS "OpenMP not found — matmul will be single-threaded")
+endif()
+
 include(CTest)
 
 if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
@@ -87,6 +95,7 @@ if(NEURONIX_BUILD_TESTS AND BUILD_TESTING)
         tests/scheduler_tests.cpp
         tests/conv_tests.cpp
         tests/batchnorm_tests.cpp
+        tests/flatten_tests.cpp
     )
 
     target_link_libraries(neuronix_tests

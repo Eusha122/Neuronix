@@ -10,6 +10,7 @@
 #include "neuronix/layers/conv2d.hpp"
 #include "neuronix/layers/max_pool2d.hpp"
 #include "neuronix/layers/batch_norm.hpp"
+#include "neuronix/layers/flatten.hpp"
 #include "neuronix/activations/relu.hpp"
 #include "neuronix/activations/sigmoid.hpp"
 #include "neuronix/activations/tanh_activation.hpp"

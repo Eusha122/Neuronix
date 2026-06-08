@@ -6,6 +6,10 @@
 #include <numeric>
 #include <stdexcept>
 
+#ifdef _OPENMP
+#  include <omp.h>
+#endif
+
 namespace neuronix {
 
 // Constructors
@@ -181,7 +185,9 @@ Matrix Matrix::operator-() const {
     return result;
 }
 
-// Matrix multiplication — ikj loop order for cache friendliness
+// Matrix multiplication — ikj loop order, parallelised over output rows.
+// Each thread owns distinct rows of result so no data race.
+// ptrdiff_t loop variable required by OpenMP 2.0 (MSVC default).
 
 Matrix Matrix::operator*(const Matrix& other) const {
     if (cols_ != other.rows_) {
@@ -189,11 +195,19 @@ Matrix Matrix::operator*(const Matrix& other) const {
             "Matrix::operator*: left cols must equal right rows"};
     }
     Matrix result{rows_, other.cols_};
-    for (std::size_t i = 0; i < rows_; ++i) {
-        for (std::size_t k = 0; k < cols_; ++k) {
-            const double aik = (*this)(i, k);
-            for (std::size_t j = 0; j < other.cols_; ++j) {
-                result(i, j) += aik * other(k, j);
+    const auto   M = static_cast<std::ptrdiff_t>(rows_);
+    const auto   K = static_cast<std::ptrdiff_t>(cols_);
+    const auto   N = static_cast<std::ptrdiff_t>(other.cols_);
+    const double* A = data_.data();
+    const double* B = other.data_.data();
+    double*       C = result.data_.data();
+
+#pragma omp parallel for schedule(static)
+    for (std::ptrdiff_t i = 0; i < M; ++i) {
+        for (std::ptrdiff_t k = 0; k < K; ++k) {
+            const double aik = A[i * K + k];
+            for (std::ptrdiff_t j = 0; j < N; ++j) {
+                C[i * N + j] += aik * B[k * N + j];
             }
         }
     }

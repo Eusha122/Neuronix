@@ -14,6 +14,7 @@
 #include "neuronix/activations/softmax.hpp"
 #include "neuronix/activations/dropout.hpp"
 #include "neuronix/layers/batch_norm.hpp"
+#include "neuronix/layers/flatten.hpp"
 
 namespace neuronix {
 
@@ -119,6 +120,7 @@ enum class LayerTypeId : uint8_t {
     MaxPool2D = 6,
     Dropout   = 7,
     BatchNorm = 8,
+    Flatten   = 9,
 };
 
 constexpr char     kMagic[4] = {'N','X','N','N'};
@@ -199,6 +201,8 @@ void neuronix::Model::save(const std::string& path) const {
         } else if (auto* dr = dynamic_cast<const Dropout*>(layer.get())) {
             write_u8(os, static_cast<uint8_t>(LayerTypeId::Dropout));
             write_f64(os, dr->drop_rate());
+        } else if (dynamic_cast<const Flatten*>(layer.get())) {
+            write_u8(os, static_cast<uint8_t>(LayerTypeId::Flatten));
         } else if (auto* bn = dynamic_cast<const BatchNorm*>(layer.get())) {
             write_u8(os,  static_cast<uint8_t>(LayerTypeId::BatchNorm));
             write_u32(os, static_cast<uint32_t>(bn->num_features()));
@@ -280,6 +284,9 @@ neuronix::Model neuronix::Model::load(const std::string& path) {
                 model.add<Dropout>(p);
                 break;
             }
+            case LayerTypeId::Flatten:
+                model.add<Flatten>();
+                break;
             case LayerTypeId::BatchNorm: {
                 auto   nf  = static_cast<std::size_t>(read_u32(is));
                 double e   = read_f64(is);

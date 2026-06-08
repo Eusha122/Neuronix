@@ -1,26 +1,28 @@
+#include <chrono>
 #include <iomanip>
 #include <iostream>
 #include <string>
 
 #include "neuronix/neuronix.hpp"
 
-// LeNet-5 inspired architecture for MNIST.
+// Improved CNN for MNIST — 3x3 convs, BatchNorm, Dropout, CosineAnnealing.
 //
-// Input layout: (784, N) — same format as neuronix_mnist.exe
+// Input layout: (784, N) — each column is one flattened, normalized image
 //
-//  Conv(1,6,5,28,28,pad=2) → (6*28*28, N)   [156 params]
+//  Conv(1,16,3,28,28,pad=1)  same-pad  → (16*28*28, N)   [160 params]
 //  ReLU
-//  MaxPool(2,6,28,28)      → (6*14*14, N)
-//  Conv(6,16,5,14,14)      → (16*10*10,N)   [2416 params]
+//  MaxPool(2,16,28,28)                  → (16*14*14, N)
+//  Conv(16,32,3,14,14,pad=1) same-pad  → (32*14*14, N)   [4640 params]
 //  ReLU
-//  MaxPool(2,16,10,10)     → (16*5*5,  N)   [= 400 features]
-//  Dense(400,120)                            [48120 params]
+//  MaxPool(2,32,14,14)                  → (32*7*7,  N) = (1568, N)
+//  Flatten
+//  Dense(1568,256)                                        [401664 params]
+//  BatchNorm(256)                                         [512 params]
 //  ReLU
-//  Dense(120,84)                             [10164 params]
-//  ReLU
-//  Dense(84,10)                              [850 params]
+//  Dropout(0.35)
+//  Dense(256,10)                                          [2570 params]
 //
-//  Total: 61706 params   (vs 235146 for the fully-connected baseline)
+//  Total: ~409546 params   Target: >99% test accuracy
 
 int main(int argc, char* argv[]) {
     const std::string data_dir = (argc > 1) ? argv[1] : "data/mnist";
@@ -40,29 +42,38 @@ int main(int argc, char* argv[]) {
     neuronix::seed_random(42);
 
     neuronix::Model model;
-    model.add<neuronix::Conv2D>(1, 6, 5, 28, 28, 2);   // same-pad
+    model.add<neuronix::Conv2D>(1, 16, 3, 28, 28, 1);   // same-pad
     model.add<neuronix::ReLU>();
-    model.add<neuronix::MaxPool2D>(2, 6, 28, 28);
-    model.add<neuronix::Conv2D>(6, 16, 5, 14, 14);     // valid-pad
+    model.add<neuronix::MaxPool2D>(2, 16, 28, 28);
+    model.add<neuronix::Conv2D>(16, 32, 3, 14, 14, 1);  // same-pad
     model.add<neuronix::ReLU>();
-    model.add<neuronix::MaxPool2D>(2, 16, 10, 10);
-    model.add<neuronix::Dense>(400, 120);
+    model.add<neuronix::MaxPool2D>(2, 32, 14, 14);
+    model.add<neuronix::Flatten>();
+    model.add<neuronix::Dense>(1568, 256);
+    model.add<neuronix::BatchNorm>(256);
     model.add<neuronix::ReLU>();
-    model.add<neuronix::Dense>(120, 84);
-    model.add<neuronix::ReLU>();
-    model.add<neuronix::Dense>(84, 10);
+    model.add<neuronix::Dropout>(0.35);
+    model.add<neuronix::Dense>(256, 10);
     model.summary();
 
-    neuronix::CrossEntropyLoss loss_fn;
-    neuronix::Adam             opt{model, 0.001};
+    neuronix::CrossEntropyLoss                   loss_fn;
+    neuronix::Adam                               opt{model, 0.001};
+    neuronix::CosineAnnealingLR<neuronix::Adam>  sched{opt, 15, 0.00005};
 
-    const std::size_t epochs     = 10;
-    const std::size_t batch_size = 64;
+    const std::size_t epochs     = 15;
+    const std::size_t batch_size = 128;
+
+    std::cout << "\nTraining: " << epochs << " epochs, batch=" << batch_size
+              << ", Adam lr=1e-3 -> 5e-5 (cosine)\n";
+    std::cout << std::string(70, '=') << '\n';
 
     for (std::size_t epoch = 0; epoch < epochs; ++epoch) {
+        const auto t0 = std::chrono::steady_clock::now();
+
         neuronix::DataLoader loader{train.images, train.labels_onehot,
                                     batch_size, true};
-        double total_loss = 0.0;
+        double      total_loss = 0.0;
+        std::size_t n_batches  = 0;
 
         for (auto [X, y] : loader) {
             opt.zero_grad();
@@ -70,20 +81,26 @@ int main(int argc, char* argv[]) {
             total_loss += loss_fn.forward(out, y);
             model.backward(loss_fn.backward());
             opt.step();
+            ++n_batches;
         }
 
-        loader.reshuffle();
+        sched.step();
 
-        const double avg_loss  = total_loss / static_cast<double>(loader.num_batches());
-        const double test_acc  = neuronix::metrics::accuracy(
+        const double dt = std::chrono::duration<double>(
+            std::chrono::steady_clock::now() - t0).count();
+        const double avg_loss = total_loss / static_cast<double>(n_batches);
+        const double test_acc = neuronix::metrics::accuracy(
             model.predict(test.images), test.labels);
 
         std::cout << "Epoch " << std::setw(2) << epoch + 1
-                  << "  loss=" << std::fixed << std::setprecision(4) << avg_loss
-                  << "  test_acc=" << std::setprecision(4) << test_acc << '\n';
+                  << "  loss=" << std::fixed    << std::setprecision(4) << avg_loss
+                  << "  test_acc=" << std::setprecision(4) << test_acc
+                  << "  lr=" << std::scientific  << std::setprecision(2) << opt.lr()
+                  << "  " << std::fixed << std::setprecision(1) << dt << "s"
+                  << '\n';
     }
 
     model.save("lenet_mnist.nnx");
-    std::cout << "Model saved to lenet_mnist.nnx\n";
+    std::cout << "\nModel saved to lenet_mnist.nnx\n";
     return 0;
 }
