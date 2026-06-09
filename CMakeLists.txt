@@ -147,6 +147,11 @@ if(NEURONIX_BUILD_EXAMPLES)
         examples/emnist_train.cpp
     )
     target_link_libraries(neuronix_emnist PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_infer
+        examples/infer.cpp
+    )
+    target_link_libraries(neuronix_infer PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)
