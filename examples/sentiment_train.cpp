@@ -48,6 +48,7 @@ int main(int argc, char* argv[]) {
     neuronix::Model model;
     model.add<neuronix::Embedding>(vocab_size, embed_dim, seq_len);
     model.add<neuronix::LSTM>(embed_dim, hidden, seq_len);
+    model.add<neuronix::Dropout>(0.5);
     model.add<neuronix::Dense>(hidden, 2);
     model.summary();
 
