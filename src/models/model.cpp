@@ -17,6 +17,9 @@
 #include "neuronix/activations/gelu.hpp"
 #include "neuronix/layers/batch_norm.hpp"
 #include "neuronix/layers/flatten.hpp"
+#include "neuronix/layers/residual_block.hpp"
+#include "neuronix/layers/lstm.hpp"
+#include "neuronix/layers/embedding.hpp"
 
 namespace neuronix {
 
@@ -129,8 +132,11 @@ enum class LayerTypeId : uint8_t {
     Dropout    = 7,
     BatchNorm  = 8,
     Flatten    = 9,
-    LeakyReLU  = 10,
-    GELU       = 11,
+    LeakyReLU      = 10,
+    GELU           = 11,
+    ResidualBlock  = 12,
+    LSTM           = 13,
+    Embedding      = 14,
 };
 
 constexpr char     kMagic[4] = {'N','X','N','N'};
@@ -227,6 +233,31 @@ void neuronix::Model::save(const std::string& path) const {
             write_matrix(os, bn->beta());
             write_matrix(os, bn->running_mean());
             write_matrix(os, bn->running_var());
+        } else if (auto* em = dynamic_cast<const Embedding*>(layer.get())) {
+            write_u8(os,  static_cast<uint8_t>(LayerTypeId::Embedding));
+            write_u32(os, static_cast<uint32_t>(em->vocab_size()));
+            write_u32(os, static_cast<uint32_t>(em->embed_dim()));
+            write_u32(os, static_cast<uint32_t>(em->seq_len()));
+            write_matrix(os, em->weights());
+        } else if (auto* ls = dynamic_cast<const LSTM*>(layer.get())) {
+            write_u8(os,  static_cast<uint8_t>(LayerTypeId::LSTM));
+            write_u32(os, static_cast<uint32_t>(ls->input_size()));
+            write_u32(os, static_cast<uint32_t>(ls->hidden_size()));
+            write_u32(os, static_cast<uint32_t>(ls->seq_len()));
+            write_matrix(os, ls->W_x());
+            write_matrix(os, ls->W_h());
+            write_matrix(os, ls->b());
+        } else if (auto* rb = dynamic_cast<const ResidualBlock*>(layer.get())) {
+            write_u8(os,  static_cast<uint8_t>(LayerTypeId::ResidualBlock));
+            write_u32(os, static_cast<uint32_t>(rb->channels()));
+            write_u32(os, static_cast<uint32_t>(rb->height()));
+            write_u32(os, static_cast<uint32_t>(rb->width()));
+            write_u32(os, static_cast<uint32_t>(rb->kernel_size()));
+            write_u32(os, static_cast<uint32_t>(rb->padding()));
+            write_matrix(os, rb->conv1().weights());
+            write_matrix(os, rb->conv1().bias());
+            write_matrix(os, rb->conv2().weights());
+            write_matrix(os, rb->conv2().bias());
         } else {
             throw std::runtime_error{
                 "Model::save: unsupported layer '" + std::string{layer->name()} + "'"};
@@ -324,6 +355,47 @@ neuronix::Model neuronix::Model::load(const std::string& path) {
                 bn->set_running_mean(std::move(rm));
                 bn->set_running_var(std::move(rv));
                 model.add(std::move(bn));
+                break;
+            }
+            case LayerTypeId::Embedding: {
+                auto V  = static_cast<std::size_t>(read_u32(is));
+                auto E  = static_cast<std::size_t>(read_u32(is));
+                auto T  = static_cast<std::size_t>(read_u32(is));
+                Matrix w = read_matrix(is);
+                auto em  = std::make_unique<Embedding>(V, E, T);
+                em->set_weights(std::move(w));
+                model.add(std::move(em));
+                break;
+            }
+            case LayerTypeId::LSTM: {
+                auto I   = static_cast<std::size_t>(read_u32(is));
+                auto H   = static_cast<std::size_t>(read_u32(is));
+                auto T   = static_cast<std::size_t>(read_u32(is));
+                Matrix wx = read_matrix(is);
+                Matrix wh = read_matrix(is);
+                Matrix b  = read_matrix(is);
+                auto ls  = std::make_unique<LSTM>(I, H, T);
+                ls->set_W_x(std::move(wx));
+                ls->set_W_h(std::move(wh));
+                ls->set_b(std::move(b));
+                model.add(std::move(ls));
+                break;
+            }
+            case LayerTypeId::ResidualBlock: {
+                auto C   = static_cast<std::size_t>(read_u32(is));
+                auto H   = static_cast<std::size_t>(read_u32(is));
+                auto W   = static_cast<std::size_t>(read_u32(is));
+                auto K   = static_cast<std::size_t>(read_u32(is));
+                auto pad = static_cast<std::size_t>(read_u32(is));
+                Matrix w1 = read_matrix(is); Matrix b1 = read_matrix(is);
+                Matrix w2 = read_matrix(is); Matrix b2 = read_matrix(is);
+                auto rb = std::make_unique<ResidualBlock>(C, H, W, K, pad);
+                // Access conv1/conv2 via const refs, then cast to set weights
+                const_cast<Conv2D&>(rb->conv1()).set_weights(std::move(w1));
+                const_cast<Conv2D&>(rb->conv1()).set_bias(std::move(b1));
+                const_cast<Conv2D&>(rb->conv2()).set_weights(std::move(w2));
+                const_cast<Conv2D&>(rb->conv2()).set_bias(std::move(b2));
+                model.add(std::move(rb));
                 break;
             }
             default:

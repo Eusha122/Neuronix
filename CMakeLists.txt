@@ -31,6 +31,10 @@ add_library(neuronix
     src/layers/dense.cpp
     src/layers/conv2d.cpp
     src/layers/batch_norm.cpp
+    src/layers/residual_block.cpp
+    src/layers/lstm.cpp
+    src/layers/embedding.cpp
+    src/data/imdb_loader.cpp
     src/activations/softmax.cpp
     src/models/model.cpp
     src/losses/mse_loss.cpp
@@ -152,6 +156,16 @@ if(NEURONIX_BUILD_EXAMPLES)
         examples/infer.cpp
     )
     target_link_libraries(neuronix_infer PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_sentiment
+        examples/sentiment_train.cpp
+    )
+    target_link_libraries(neuronix_sentiment PRIVATE Neuronix::neuronix)
+
+    add_executable(neuronix_resnet
+        examples/cifar10_resnet.cpp
+    )
+    target_link_libraries(neuronix_resnet PRIVATE Neuronix::neuronix)
 endif()
 
 if(NEURONIX_BUILD_BENCHMARKS)
